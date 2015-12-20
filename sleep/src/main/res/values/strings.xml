@@ -5,4 +5,7 @@
     <string name="button.answer.no">No</string>
     <string name="toast.answer.yes">Great! Keep it up! :)</string>
     <string name="toast.answer.no">Bummer. Better sleep next night then!</string>
+    <string name="button.viewHistory">Answer History</string>
+    <string name="history.answer.yes">Good sleep</string>
+    <string name="history.answer.no">Slept poorly</string>
 </resources>
