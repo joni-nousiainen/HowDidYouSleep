@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">How Did You Sleep?</string>
+    <string name="question">Did you sleep OK last night?</string>
+    <string name="button.answer.yes">Yes</string>
+    <string name="button.answer.no">No</string>
+    <string name="toast.answer.yes">Great! Keep it up! :)</string>
+    <string name="toast.answer.no">Bummer. Better sleep next night then!</string>
+</resources>

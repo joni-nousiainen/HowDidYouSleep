@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kuinka nukuit?</string>
+    <string name="button.answer.no">En</string>
+    <string name="button.answer.yes">Kyllä</string>
+    <string name="question">Nukuitko hyvin viime yönä?</string>
+    <string name="toast.answer.yes">Kiva! Jatka samaan malliin! :)</string>
+    <string name="toast.answer.no">Harmi. Paremmin unta ensi yönä sitten!</string>
+</resources>
