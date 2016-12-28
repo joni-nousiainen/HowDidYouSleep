@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">How Did You Sleep?</string>
     <string name="question">Did you sleep OK last night?</string>
@@ -8,4 +9,5 @@
     <string name="button.viewHistory">Answer History</string>
     <string name="history.answer.yes">Good sleep</string>
     <string name="history.answer.no">Slept poorly</string>
+    <string name="history.answer.empty">No answer</string>
 </resources>

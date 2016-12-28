@@ -13,7 +13,8 @@ import android.widget.ToggleButton;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    public  static final String PREFERENCES_FILE_NAME = "info.joninousiainen.android.sleep.Preferences";
+    public static final String PREFERENCES_FILE_NAME = "info.joninousiainen.android.sleep.Preferences";
+    public static final String ANSWER_KEY_PREFIX = "answer-";
 
     private ToggleButton yesButton;
     private ToggleButton noButton;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences preferences = getSharedPreferences(PREFERENCES_FILE_NAME, MODE_PRIVATE);
         String date = DateFormat.format("yyyyMMdd", new Date()).toString();
-        String key = "answer-" + date;
+        String key = ANSWER_KEY_PREFIX + date;
         String value = preferences.getString(key, null);
         if (value != null) {
             switch (value) {
