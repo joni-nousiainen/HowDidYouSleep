@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -17,7 +18,7 @@ public class ViewHistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_history);
 
         SharedPreferences preferences = getSharedPreferences(MainActivity.PREFERENCES_FILE_NAME, MODE_PRIVATE);
-        Map<String, String> sortedDates = new TreeMap<>();
+        Map<String, String> sortedDates = new TreeMap<>(Collections.reverseOrder());
         for (String key : preferences.getAll().keySet()) {
             if (key.startsWith("answer-")) {
                 String date = key.substring("answer-".length());
