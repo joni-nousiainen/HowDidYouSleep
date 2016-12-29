@@ -8,6 +8,7 @@
     <string name="toast.answer.no">Harmi. Paremmin unta ensi yönä sitten!</string>
     <string name="button.viewHistory">Vastaushistoria</string>
     <string name="history.answer.yes">Hyvät unet</string>
-    <string name="history.answer.no">Nukuin huonosti</string>
+    <string name="history.answer.no">Huonot unet</string>
     <string name="history.answer.empty">Ei vastausta</string>
+    <string name="history.date_format">dd.MM.yyyy</string>
 </resources>

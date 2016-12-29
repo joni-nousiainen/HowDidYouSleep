@@ -8,6 +8,7 @@
     <string name="toast.answer.no">Bummer. Better sleep next night then!</string>
     <string name="button.viewHistory">Answer History</string>
     <string name="history.answer.yes">Good sleep</string>
-    <string name="history.answer.no">Slept poorly</string>
+    <string name="history.answer.no">Bad sleep</string>
     <string name="history.answer.empty">No answer</string>
+    <string name="history.date_format">MM/dd/yyyy</string>
 </resources>

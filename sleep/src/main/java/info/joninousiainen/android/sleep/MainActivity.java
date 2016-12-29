@@ -13,9 +13,6 @@ import android.widget.ToggleButton;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String PREFERENCES_FILE_NAME = "info.joninousiainen.android.sleep.Preferences";
-    public static final String ANSWER_KEY_PREFIX = "answer-";
-
     private ToggleButton yesButton;
     private ToggleButton noButton;
     private Button viewHistoryButton;
@@ -30,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         noButton = (ToggleButton) findViewById(R.id.button_no);
         viewHistoryButton = (Button) findViewById(R.id.button_viewHistory);
 
-        SharedPreferences preferences = getSharedPreferences(PREFERENCES_FILE_NAME, MODE_PRIVATE);
-        String date = DateFormat.format("yyyyMMdd", new Date()).toString();
-        String key = ANSWER_KEY_PREFIX + date;
+        SharedPreferences preferences = getSharedPreferences(SharedConstants.PREFERENCES_FILE_NAME, MODE_PRIVATE);
+        String date = DateFormat.format(SharedConstants.DATE_FORMAT, new Date()).toString();
+        String key = SharedConstants.ANSWER_KEY_PREFIX + date;
         String value = preferences.getString(key, null);
         if (value != null) {
             switch (value) {
@@ -80,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void storeAnswer(String answer) {
-        SharedPreferences preferences = getSharedPreferences(PREFERENCES_FILE_NAME, MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences(SharedConstants.PREFERENCES_FILE_NAME, MODE_PRIVATE);
         SharedPreferences.Editor edit = preferences.edit();
-        String date = DateFormat.format("yyyyMMdd", new Date()).toString();
+        String date = DateFormat.format(SharedConstants.DATE_FORMAT, new Date()).toString();
         edit.putString("answer-" + date, answer);
         edit.commit();
     }
