@@ -7,6 +7,8 @@
     <string name="toast.answer.yes">Kiva! Jatka samaan malliin! :)</string>
     <string name="toast.answer.no">Harmi. Paremmin unta ensi yönä sitten!</string>
     <string name="button.viewHistory">Vastaushistoria</string>
+    <string name="history.header.last_30_days">Edelliset 30 päivää</string>
+    <string name="history.header.all_answers">Kaikki vastaukset</string>
     <string name="history.answer.yes">Hyvät unet</string>
     <string name="history.answer.no">Huonot unet</string>
     <string name="history.answer.empty">Ei vastausta</string>
