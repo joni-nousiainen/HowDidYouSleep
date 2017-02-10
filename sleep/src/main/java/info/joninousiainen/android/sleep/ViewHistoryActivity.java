@@ -1,6 +1,5 @@
 package info.joninousiainen.android.sleep;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -112,23 +112,34 @@ public class ViewHistoryActivity extends AppCompatActivity {
         answerCounts.put(SharedConstants.ANSWER_NO, 0);
         answerCounts.put(SharedConstants.ANSWER_EMPTY, 0);
         int counter = 0;
+        final int maxDays = 30;
         for (Map.Entry<Date, String> entry : answersByDate.entrySet()) {
             String answer = entry.getValue();
             Integer count = answerCounts.get(answer);
             answerCounts.put(answer, count + 1);
 
-            if (counter > 30) {
-                break;
+            if (counter < (maxDays - 1)) {
+                counter++;
             }
             else {
-                counter++;
+                break;
             }
         }
         LinearLayout last30DaysLayout = (LinearLayout) findViewById(R.id.last30DaysLayout);
         for (Map.Entry<String, Integer> entry : answerCounts.entrySet()) {
+            StringBuilder answer = new StringBuilder(getLocalizedAnswer(entry.getKey()));
+            answer.append(": ");
+            Integer value = entry.getValue();
+            answer.append(value);
+            answer.append(" (");
+            answer.append(BigDecimal.valueOf(100)
+                    .multiply(BigDecimal.valueOf(entry.getValue()))
+                    .divide(BigDecimal.valueOf(maxDays), 0, BigDecimal.ROUND_UP));
+            answer.append(" %)");
+
             TextView text = new TextView(this);
             text.setTextAppearance(android.R.style.TextAppearance_Medium);
-            text.setText(getLocalizedAnswer(entry.getKey()) + ": " + entry.getValue());
+            text.setText(answer.toString());
             last30DaysLayout.addView(text);
         }
     }

@@ -32,6 +32,7 @@
                 android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true" android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true" android:weightSum="1" android:gravity="center_vertical"
+                android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
                 android:id="@+id/last30DaysLayout">
             </LinearLayout>
             <TextView
@@ -48,6 +49,7 @@
                 android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true" android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true" android:weightSum="1" android:gravity="center_vertical"
+                android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
                 android:id="@+id/allAnswersLayout">
             </LinearLayout>
         </LinearLayout>
