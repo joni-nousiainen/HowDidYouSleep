@@ -1,8 +1,8 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!-- TODO: Read about Android Material Design -->
+    <!-- https://developer.android.com/training/material/get-started.html -->
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:colorPrimary">#2b90d9</item>
+        <item name="android:textColorPrimary">#d9e1e8</item>
     </style>
-
 </resources>
