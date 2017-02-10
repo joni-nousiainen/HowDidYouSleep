@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         String value = preferences.getString(key, null);
         if (value != null) {
             switch (value) {
-                case "yes":
+                case SharedConstants.ANSWER_YES:
                     yesButton.setChecked(true);
                     noButton.setChecked(false);
                     break;
-                case "no":
+                case SharedConstants.ANSWER_NO:
                     yesButton.setChecked(false);
                     noButton.setChecked(true);
                     break;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                storeAnswer("yes");
+                storeAnswer(SharedConstants.ANSWER_YES);
 
                 yesButton.setChecked(true);
                 noButton.setChecked(false);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         noButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                storeAnswer("no");
+                storeAnswer(SharedConstants.ANSWER_NO);
 
                 yesButton.setChecked(false);
                 noButton.setChecked(true);
